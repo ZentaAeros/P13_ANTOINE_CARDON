@@ -140,3 +140,15 @@ docker run -d -p 8000:8000 -e PORT=8000 nom_utilisateur/nom_application:hash
 ```
 
 2. Vous pourrez ensuite aller sur votre navigateur internet à l'adresse : localhost:8000
+
+#### Sentry
+Sentry est une plateforme de gestion des erreurs en temps réel pour les applications. 
+Suivez les étapes ci-dessous pour mettre en place Sentry dans votre projet :
+
+1. Créez un compte sur Sentry (https://sentry.io/) si vous n'en avez pas déjà un.
+
+2. Créez un nouveau projet dans Sentry pour votre application OC Lettings.
+
+3. Dans le fichier `.env`, trouvez la ligne `SENTRY_DSN=`et définissez sa valeur sur la clé DSN fournie par Sentry.
+
+4. Bravo ! Vous avez mis en place Sentry.
