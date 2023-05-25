@@ -52,3 +52,14 @@ docker run -d -p 8000:8000 -e PORT=8000 nom_de_votre_image
 ```
 
 3. Vous pouvez à présent accéder à l'application depuis votre navigateur internet à l'adresse : localhost:8000
+
+
+#### Récupérez l'image de l'application depuis le Docker Hub
+
+1. Executez la commande ci-dessous avec votre nom d'utilisateur, le nom de l'application ainsi que le hash du commit :
+
+```shell
+docker run -d -p 8000:8000 -e PORT=8000 nom_utilisateur/nom_application:hash
+```
+
+2. Vous pourrez ensuite aller sur votre navigateur internet à l'adresse : localhost:8000
