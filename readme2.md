@@ -19,16 +19,36 @@ Avant de procéder au déploiement, assurez-vous d'avoir les éléments suivants
 
 Suivez les étapes ci-dessous pour effectuer le déploiement de l'application en utilisant le CI/CD de GitLab :
 
-1. Connectez-vous à votre compte GitLab sur le site web.
+1. Connectez-vous et créez une application en spécifiant le nom souhaité.
 
-2. Accédez à votre projet OC Lettings.
+2. Connectez-vous à votre compte GitLab sur le site web.
 
-3. Assurez-vous que les variables d'environnement requises sont configurées dans les paramètres du projet GitLab.
+3. Accédez à votre projet OC Lettings.
 
-4. Lancez le pipeline 
+4. Assurez-vous que les variables d'environnement requises sont configurées dans les paramètres du projet GitLab.
 
-5. GitLab exécutera les étapes de déploiement spécifiées dans le fichier `.gitlab-ci.yml`.
+5. Lancez le pipeline 
 
-6. Une fois le pipeline de déploiement terminé avec succès, l'application OC Lettings sera déployée automatiquement sur Heroku.
+6. GitLab exécutera les étapes de déploiement spécifiées dans le fichier `.gitlab-ci.yml`.
+
+7. Une fois le pipeline de déploiement terminé avec succès, l'application OC Lettings sera déployée automatiquement sur Heroku.
 
 Assurez-vous de suivre attentivement ces étapes pour garantir un déploiement sans problème en utilisant le CI/CD de GitLab. Si vous rencontrez des problèmes lors du déploiement, référez-vous à cette documentation.
+
+### Docker
+
+Si vous souhaitez construire une image Docker de l'application, vous pouvez suivre ces étapes supplémentaires :
+
+1. À la racine du projet, exécutez la commande suivante pour construire l'image Docker :
+
+```shell
+docker build -t nom_de_votre_image .
+```
+
+2. Une fois la construction terminée, vous pouvez exécuter le conteneur à partir de l'image créée en utilisant la commande suivante :
+
+```shell
+docker run -d -p 8000:8000 -e PORT=8000 nom_de_votre_image
+```
+
+3. Vous pouvez à présent accéder à l'application depuis votre navigateur internet à l'adresse : localhost:8000
